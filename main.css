@@ -1,0 +1,153 @@
+/* Font Face 설정 */ 
+@font-face{font-family: NanumBrush; src: url('../font/NanumBrush.woff');} 
+@font-face{font-family: ChosunCentennial; src: url('../font/ChosunCentennial.woff2');} 
+@font-face{font-family: 훈민정음L; src: url('../font/EBS훈민정음L.woff');}
+@font-face{font-family: hosunilbo_myungjo; src: url('../font/Chosunilbo_myungjo.woff');}
+@font-face{font-family: NanumGothic; src: url('../font/NanumGothic.woff');}
+
+/* 전체 페이지 및 기본 스타일 */ 
+*{margin: 0 auto; padding: 0; scroll-behavior: smooth;}
+
+/* 메뉴바 스타일 */
+    #menu-items li a {
+        color: white;
+        transition: color 0.3s;
+    }
+    #menu-items li a.active {
+        color: black;
+    }
+
+#manu{width: 100%; height: 70px; position: fixed; z-index: 100; text-align: center;}
+#menu-items{margin-right: 200px;}
+#menu-items li {display: inline-block; padding: 25px 40px; font-family: NanumGothic; position: relative;}
+#menu-items li a{color: white; text-decoration: none;}
+#logo {float: left; margin-left: 80px; margin-top: 20px;}
+#bar {float: right; margin-right: 80px; margin-top: -45px;}
+
+/* 드롭다운 메뉴 스타일 */
+#dropdown-menu {width: 100%; 
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0.8); 
+    position: fixed; 
+    left: 0; 
+    max-height: 0;  /* 초기 상태에서 드롭다운 메뉴를 숨김 */
+    overflow: hidden; /* 내용이 넘어가는 것을 숨김 */
+    transition: max-height 0.4s ease-in; /* 부드러운 애니메이션 효과 */
+    z-index: 99;
+}
+
+#dropdown-menu ul {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#dropdown-menu ul li {
+    list-style: none;
+    padding: 10px 30px;
+}
+
+#dropdown-menu ul li a {
+    color: white; 
+    text-decoration: none;
+    font-size: 20px;
+    font-family: NanumGothic;
+}
+
+/* 마우스 오버 시 드롭다운 표시 */
+#manu:hover + #dropdown-menu, 
+#dropdown-menu:hover {
+    max-height: 300px; /* 드롭다운 메뉴의 높이를 조절하여 나타나게 함 */
+}
+
+
+/* 섹션 스타일 */ 
+.section{height: 100vh; display: flex; align-items: center; justify-content: center; color: white; font-size: 100px; font-family: ChosunCentennial;} 
+#top1{background-image: url('../img/3.jpg');} 
+#top2{background-image: url('../img/2.jpg');} 
+#top3{background-image: url('../img/1.jpg');} 
+
+
+#top4{width: 100%; background-color: #ffffff; }
+#top4-center{width: 100%; position: relative;}
+/* Normal Scroll Section */ 
+#top4-img1{float: right;} 
+#top4-img2{width: 1400px; height: 266px; float: right; margin-left: 360px; margin-right: 80px;} 
+#top4-img2 img{margin-top: 100px;} 
+#top4-img3 img{margin-top: -100px; float: left;} 
+#top4-img2 h1{font-size: 145px; float: right; font-family: NanumBrush; font-weight: lighter; margin-top: -20px;} 
+#top4-img2 p{font-size: 24px; float: right; font-family: ChosunCentennial; margin-top: -180px; color: #a5402b;} 
+
+
+/* 컨테이너 및 애니메이션 설정 */ 
+.container, .container1{position: relative; display: flex; align-items: center; width: 100%; height: 288px; overflow: hidden; margin-bottom: 30px;} 
+.boxes, .list2 ul{position: absolute; display: flex; gap: 0 20px; width: max-content; animation: aniScroll 50s linear infinite;} 
+.list2{animation: aniScroll-2 50s linear infinite;} 
+#top4-center li{list-style: none; width: 359px; height: 288px;} 
+
+.box1{background-image: url('../img/박스1.png'); margin-left: -15px;} 
+.box2{background-image: url('../img/박스2.png');} 
+.box3{background-image: url('../img/박스3.png');} 
+.box4{background-image: url('../img/박스4.png');} 
+.box5{background-image: url('../img/박스5.png');} 
+.box6{background-image: url('../img/박스6.png'); } 
+
+.box7{background-image: url('../img/박스8.png');} 
+.box8{background-image: url('../img/박스9.png');} 
+.box9{background-image: url('../img/박스10.png');} 
+.box10{background-image: url('../img/박스11.png');} 
+.box11{background-image: url('../img/박스12.png');} 
+.container1 ul{animation: aniScroll-3 50s linear infinite;} 
+.container1 .list2{animation: aniScroll-4 50s linear infinite;}
+
+/* 애니메이션 설정 */ 
+@keyframes aniScroll{0%{transform: translateX(-100%);} 100%{transform: translateX(0%);}} 
+@keyframes aniScroll-2{0%{transform: translateX(0%);} 100%{transform: translateX(100%);}} 
+@keyframes aniScroll-3{0%{transform: translateX(0%);} 100%{transform: translateX(-100%);}} 
+@keyframes aniScroll-4{0%{transform: translateX(100%);} 100%{transform: translateX(0%);}}
+
+#top5{ width: 100%; height: 570px; overflow: auto;}
+#top5-center{width: 100%; height: 300px;}
+#top5 img{float: right;}
+
+#top5 p{font-size: 145px; float: left; font-family: NanumBrush; font-weight: lighter; margin-left: 80px; margin-top: 40px;}
+#top5-box1{width: 100%; height: 570px; background-color: #daf1fb; position: absolute; margin-top: 300px;}
+#top5-box1-1{width: 1760px; height: 592px; margin: auto; margin-top: -60px;}
+
+
+.art{float: left; margin-right: 45px;}
+.art1{float: left;}
+#artbox1{width: 330px; height:600px; font-family: hosunilbo_myungjo; line-height: 20px;}
+#artbox1 img{margin-bottom: 20px;}
+#artbox1 h2{line-height: 30px;}
+
+#artbox2{width: 324px; height:600px; font-family: hosunilbo_myungjo; line-height: 20px;}
+#artbox2 img{margin-bottom: 25px;}
+
+#artbox3{width: 315px; height:600px; font-family: hosunilbo_myungjo; line-height: 20px;}
+#artbox3 img{margin-bottom: 25px;}
+
+#artbox4{width: 305px; height:600px; font-family: hosunilbo_myungjo; line-height: 20px;}
+#artbox4 img{margin-bottom: 25px;}
+
+#artbox5{width: 304px; height:600px; font-family: hosunilbo_myungjo; line-height: 20px;}
+#artbox5 img{margin-bottom: 25px;}
+
+/*유튜브로 보는 전주여행*/
+#top6{width: 100%; height: 1180px;  margin-top: 300px; overflow: auto;}
+#top6-center{width: 100%; height: 1067px; margin-top: 41.5px;}
+#top6-box1{width: 720px; height: 1065px; float: left;}
+#top6-box1 p{float: right; font-size: 145px; font-family: NanumBrush; font-weight: lighter; margin-top: 300px; text-align: right;}
+#top6-box1 span{font-size: 24px; float: right; font-family: ChosunCentennial; color: #a5402b; text-align: right;}
+#top6-box1 img{float: left;}
+.tt{margin-top: 150px;}
+#top6-box2 {width: 1100px; height: 930px;  float: right; }
+#img1 {float: right; margin-top: 100px;}
+#img2 {float: left; margin-top: -200px;}
+
+.fter img{max-width: 100%; transition: all 0.3s linear;}
+.fter{width: 722px; float: left; position: absolute; margin-top: -635px; margin-left: 47px; overflow: hidden;  border-radius: 65px}
+.fter:hover img{transform: scale(1.1);}
+#img4{float: right; position: absolute; margin-top: 550px; margin-left: 715px}
+/*마지막*/
+#top7{width: 100%; height: 343px; background-color: #daf1fb;}
